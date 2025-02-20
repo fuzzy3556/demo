@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('images/watercolor-galaxy-sky-texture-in-pink-and-blue-free-vector.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+        input, select, button {
+            display: block;
+            width: 95%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #88529d;
+            color: white;
+            font-size: 20px;
+            width: 95%;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b700ff;
+        }
+        .clouds img {
+            position: absolute;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="clouds">
+        <img src="images/cloud.png" class="cloud" style="top: 5%; left: 5%; width: 400px; height: auto;">
+        <img src="images/Clouds2.png" class="cloud" style="top: 5%; left: 25%; width: 400px; height: auto;">
+        <img src="images/Clouds2.png" class="cloud" style="top: 10%; left: 50%; width: 400px; height: auto;">
+        <img src="images/Clouds2.png" class="cloud" style="top: 10%; left: 75%; width: 500px; height: auto;">
+    </div>
+    
+    <div class="container">
+        <h2>Book Your Nail Appointment here!</h2>
+        <form id="bookingForm" action="send_email.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <input type="age" name="age" placeholder="enter your age here!" required>
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <select name="service" required>
+                <option value="">Select a Service<option>
+                <option value="Acrylics removal">Acrylics removal</option>
+                <option value="gel manicure">gel manicure</option>
+                <option value="dip powder">dip powder</option>
+            </select>
+            <button type="submit">-  Book Appointment  -</button>
+        </form>
+    </div>
+</body>
+</html>
